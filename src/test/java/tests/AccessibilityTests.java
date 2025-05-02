@@ -1,7 +1,6 @@
 package tests;
 
 import baseTest.BaseTest;
-import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
@@ -9,18 +8,13 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import testData.GlobalData;
 
-import java.text.SimpleDateFormat;
 import java.util.Arrays;
-import java.util.Date;
 
 public class AccessibilityTests extends BaseTest {
 
     @BeforeMethod
     public void startTest() {
         start(GlobalData.mainURL);
-        String currentDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
-        String pageTitle = WebDriverRunner.getWebDriver().getTitle();
-        System.out.println("🔍 " + currentDate + " - Testing page: " + pageTitle);
     }
 
     @Test(groups = {"accessibility"})

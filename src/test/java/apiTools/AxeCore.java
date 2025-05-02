@@ -11,7 +11,9 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 import static org.testng.Assert.assertTrue;
@@ -156,6 +158,9 @@ public class AxeCore {
                         AxeReporter.getReadableAxeResults("AccessibilityTest", WebDriverRunner.getWebDriver(), results.getViolations())
         );
     }
+
+
+
 
 
     private void logViolations(List<?> violations) {

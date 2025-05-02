@@ -13,6 +13,9 @@ import org.testng.asserts.SoftAssert;
 import tools.BrowserFactory;
 import tools.InfoLogger;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class BaseTest extends BrowserFactory {
 
     protected SoftAssert softAssert;
@@ -37,6 +40,7 @@ public class BaseTest extends BrowserFactory {
         URL.set(url);
         openBrowser();
         setTools();
+        printTestInfo();
     }
 
     private void setTools() {
@@ -53,6 +57,12 @@ public class BaseTest extends BrowserFactory {
         } else {
             InfoLogger.logInfo("URL is not set. Please use setUrl() method to set the URL before opening the browser.");
         }
+    }
+
+    private void printTestInfo() {
+        String currentDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+        String pageTitle = WebDriverRunner.getWebDriver().getTitle();
+        System.out.println("🔍 " + currentDate + " - Testing page: " + pageTitle);
     }
 
     private void cleanWebsiteData() {

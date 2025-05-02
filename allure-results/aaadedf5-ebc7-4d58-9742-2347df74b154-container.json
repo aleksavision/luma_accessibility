@@ -1,0 +1,1 @@
+{"uuid":"aaadedf5-ebc7-4d58-9742-2347df74b154","name":"Luma_Accessibility_tests","children":["7af27441-d62e-4d74-852c-bfab96da00b8"],"befores":[{"name":"setUpDriver","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1746190636091,"stop":1746190636425}],"afters":[],"start":1746190636076,"stop":1746190642598}
